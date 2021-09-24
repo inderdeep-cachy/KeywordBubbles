@@ -13,6 +13,12 @@
 		0898302A26FC3CCC00155436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0898302826FC3CCC00155436 /* Main.storyboard */; };
 		0898302C26FC3CCD00155436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0898302B26FC3CCD00155436 /* Assets.xcassets */; };
 		0898302F26FC3CCD00155436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0898302D26FC3CCD00155436 /* LaunchScreen.storyboard */; };
+		0898303C26FC3D5900155436 /* Magnetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898303626FC3D5800155436 /* Magnetic.swift */; };
+		0898303D26FC3D5900155436 /* SKMultilineLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898303726FC3D5800155436 /* SKMultilineLabelNode.swift */; };
+		0898303E26FC3D5900155436 /* SKAction+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898303826FC3D5800155436 /* SKAction+Color.swift */; };
+		0898303F26FC3D5900155436 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898303926FC3D5800155436 /* Extensions.swift */; };
+		0898304026FC3D5900155436 /* MagneticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898303A26FC3D5800155436 /* MagneticView.swift */; };
+		0898304126FC3D5900155436 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0898303B26FC3D5900155436 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		0898302B26FC3CCD00155436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0898302E26FC3CCD00155436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0898303026FC3CCD00155436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0898303626FC3D5800155436 /* Magnetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Magnetic.swift; sourceTree = "<group>"; };
+		0898303726FC3D5800155436 /* SKMultilineLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultilineLabelNode.swift; sourceTree = "<group>"; };
+		0898303826FC3D5800155436 /* SKAction+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Color.swift"; sourceTree = "<group>"; };
+		0898303926FC3D5800155436 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0898303A26FC3D5800155436 /* MagneticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagneticView.swift; sourceTree = "<group>"; };
+		0898303B26FC3D5900155436 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +75,22 @@
 				0898302B26FC3CCD00155436 /* Assets.xcassets */,
 				0898302D26FC3CCD00155436 /* LaunchScreen.storyboard */,
 				0898303026FC3CCD00155436 /* Info.plist */,
+				0898304226FC3D5E00155436 /* Magnetic */,
 			);
 			path = KeywordBubbles;
+			sourceTree = "<group>";
+		};
+		0898304226FC3D5E00155436 /* Magnetic */ = {
+			isa = PBXGroup;
+			children = (
+				0898303926FC3D5800155436 /* Extensions.swift */,
+				0898303626FC3D5800155436 /* Magnetic.swift */,
+				0898303A26FC3D5800155436 /* MagneticView.swift */,
+				0898303B26FC3D5900155436 /* Node.swift */,
+				0898303826FC3D5800155436 /* SKAction+Color.swift */,
+				0898303726FC3D5800155436 /* SKMultilineLabelNode.swift */,
+			);
+			path = Magnetic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +163,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0898304026FC3D5900155436 /* MagneticView.swift in Sources */,
 				0898302726FC3CCC00155436 /* ViewController.swift in Sources */,
+				0898303C26FC3D5900155436 /* Magnetic.swift in Sources */,
+				0898304126FC3D5900155436 /* Node.swift in Sources */,
 				0898302326FC3CCC00155436 /* AppDelegate.swift in Sources */,
 				0898302526FC3CCC00155436 /* SceneDelegate.swift in Sources */,
+				0898303D26FC3D5900155436 /* SKMultilineLabelNode.swift in Sources */,
+				0898303E26FC3D5900155436 /* SKAction+Color.swift in Sources */,
+				0898303F26FC3D5900155436 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cachy.KeywordBubbles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cachy.KeywordBubbles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

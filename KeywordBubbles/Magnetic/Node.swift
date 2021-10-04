@@ -56,7 +56,7 @@ import SpriteKit
         didSet {
             //            let url = URL(string: "https://picsum.photos/1200/600")!
             //            let image = UIImage(data: try! Data(contentsOf: url))
-            texture = image.map { SKTexture(image: $0.aspectFill(self.frame.size)) }
+            texture = image.map { SKTexture(image: $0.aspectFill(CGSize(width: 20,height: 20))) }
         }
     }
     
@@ -74,6 +74,8 @@ import SpriteKit
     open var color: UIColor = Defaults.color
     
     open var texture: SKTexture?
+    
+    open var textureNode: SKSpriteNode?
     
     /**
      The selection state of the node.
@@ -325,7 +327,11 @@ import SpriteKit
         }
 
         if let texture = texture {
-            fillTexture = texture
+            textureNode = SKSpriteNode(texture:texture)
+            if let textureNode = textureNode {
+                textureNode.position = CGPoint(x: radius!/1.4142, y: radius!/1.4142)
+                self.addChild(textureNode)
+            }
         }
     }
     
@@ -348,7 +354,10 @@ import SpriteKit
             label.run(.colorTransition(from: selectedFontColor, to: originalFontColor, duration: animationDuration))
         }
         
-        self.fillTexture = nil
+        //self.fillTexture = nil
+        if let textureNode = textureNode {
+            textureNode.removeFromParent()
+        }
     }
     
     /**
